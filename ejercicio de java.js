@@ -28,3 +28,15 @@ $('.trigger-swal').on('click', function () {
     },
   })
 })
+
+function showAlert(){
+  swal({
+    title: 'Ingrese un valor máximo de 10',
+    input: 'text'
+  }).then((result) => {
+    if(result.value > 10)
+      swal('Valor superado D:');
+    else
+      swal('Todo bien :D');
+  })
+}
